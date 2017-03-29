@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root "url#index"
   get "/index" => "url#index"
-  get "/[:id]" => "url#show"
+  get "/:id" => "url#show"
   get "/new" => "url#new", :as => :new_url
   post "/new" => "url#create"
 end
