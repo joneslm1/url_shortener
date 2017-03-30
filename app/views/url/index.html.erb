@@ -4,6 +4,6 @@
     <% @urls.each do |url| %>
         <div><%= url.id %></div>
         <div><%= url.original_url %></div>
-        <div>url-shawty.herokuapp.com/<%= url.id %></div>
+        <a href="url-shawty.herokuapp.com/<%= url.id %>">link</a>
 
     <% end %>

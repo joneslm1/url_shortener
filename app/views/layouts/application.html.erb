@@ -8,7 +8,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body style= "background-image: url(http://www.doggifpage.com/gifs/<%= (1..150).to_a.sample %>.gif)">
+        <%= yield %>
   </body>
 </html>

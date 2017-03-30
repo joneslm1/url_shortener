@@ -7,7 +7,6 @@ class UrlController < ApplicationController
 
   def show
     @url = Url.find(params[:id])
-    redirect_to @url.original_url
   end
 
   def new
