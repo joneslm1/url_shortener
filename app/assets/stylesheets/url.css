@@ -8,13 +8,16 @@ table, th, td {
     border: 1px solid black;
     text-align: center;
 }
+tbody tr:nth-child(odd) {
+  background: lightgray;
+}
 
 th{
   height: 20px;
 }
+.back {font-size: 16px; }
+#new_shawty {background-color: white; float: right; font-size: 20px; opacity: 0.8; padding: 5px;}
 
-#new_shawty {background-color: white; float: right; font-size: 20px; opacity: 0.8;}
+h1 {background-color: white; max-width: auto; display: inline-block; opacity: 0.8; padding: 5px;}
 
-h1 {background-color: white; max-width: auto; display: inline-block; opacity: 0.8;}
-
-.form {background-color: lightgrey;  width: 290px; opacity: 0.8; font-size: 20px}
+.form {background-color: white;  width: 290px; opacity: 0.8; font-size: 20px; padding: 5px; }

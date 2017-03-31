@@ -1,3 +1,5 @@
+<body style= "background-image: url(http://www.catgifpage.com/gifs/<%= (1..150).to_a.sample %>.gif)">
+
 <h1>New Shawty</h1>
 <div class="form">
 
@@ -9,4 +11,9 @@
 <%= u.label  "Full Url:" %>
 <%= u.text_field :original_url %>  &nbsp; <%= u.submit %>
 <% end %>
+<div class="back">
+<%= link_to 'Back', index_url_path %>
 </div>
+
+</div>
+</body>

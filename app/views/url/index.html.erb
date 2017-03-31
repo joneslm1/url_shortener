@@ -1,20 +1,24 @@
+<body style= "background-image: url(http://www.doggifpage.com/gifs/<%= (1..150).to_a.sample %>.gif)">
+
 <h1>All links</h1>
 <div id="new_shawty"><%= link_to 'New Shawty', new_url_path%></div>
 
-<table>
+<table style="table:striped">
+  <thead>
+
   <th>Shawty Link</th>
   <th>Original Url</th>
   <th>Destroy</th>
+</thead>
 
+<tbody>
     <% @urls.each do |url| %>
     <tr>
-    </tr>
-<tr>
-
         <td><a href="https://url-shawty.herokuapp.com/<%= url.id %>">url-shawty.herokuapp.com/<%= url.id %></a></td>
         <td><a href="<%= url.original_url %>"><%= url.original_url %></a> </td>
         <td> <%= link_to '🚫', delete_url_path(url.id), method: :delete, data: { confirm: 'Are you sure?' } %> </td>
-  </tr>
-  <% end %>
-
-    </table>
+    </tr>
+    <% end %>
+</tbody>
+</table>
+</body>
