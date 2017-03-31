@@ -1,8 +1,18 @@
 <h1>All links</h1>
 
+<table>
 
     <% @urls.each do |url| %>
-        <a href="https://url-shawty.herokuapp.com/<%= url.id %>">url-shawty.herokuapp.com/<%= url.id %></a>
-        <div><%= url.original_url %></div>
-        <div> <%= link_to 'Destroy', delete_url_path(url.id), method: :delete, data: { confirm: 'Are you sure?' } %> </div>
-    <% end %>
+    <tr>
+      <th>Shawty Link</th>
+      <th>Original Url</th>
+    </tr>
+<tr>
+
+        <td><a href="https://url-shawty.herokuapp.com/<%= url.id %>">url-shawty.herokuapp.com/<%= url.id %></a></td>
+        <td><a href="<%= url.original_url %>"><%= url.original_url %></a> </td>
+        <td> <%= link_to 'Destroy', delete_url_path(url.id), method: :delete, data: { confirm: 'Are you sure?' } %> </td>
+  </tr>
+  <% end %>
+
+    </table>
