@@ -1,0 +1,20 @@
+body {color: black; background-repeat: no-repeat; background-size: cover; font-family: arial ; padding: 5px;}
+
+table {
+    border-collapse: collapse; background-color: white; width: 100%; opacity: 0.8;
+}
+
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+th{
+  height: 20px;
+}
+
+#new_shawty {background-color: white; float: right; font-size: 20px; opacity: 0.8;}
+
+h1 {background-color: white; max-width: auto; display: inline-block; opacity: 0.8;}
+
+.form {background-color: lightgrey;  width: 290px; opacity: 0.8; font-size: 20px}

@@ -1,4 +1,4 @@
-<h1>new</h1>
+<h1>New Shawty</h1>
 <div class="form">
 
 <%= form_for(@url, url: new_url_path) do |u| %>
@@ -6,9 +6,7 @@
 
 
 
-<%= u.label :original_url %>:
-<%= u.text_field :original_url %><br />
-
-<%= u.submit %>
+<%= u.label  "Full Url:" %>
+<%= u.text_field :original_url %>  &nbsp; <%= u.submit %>
 <% end %>
 </div>
