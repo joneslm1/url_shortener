@@ -1,19 +1,24 @@
 <body style= "background-image: url(http://www.catgifpage.com/gifs/<%= (1..150).to_a.sample %>.gif)">
 
 <h1>New Shawty</h1>
-<div class="form">
-
-<%= form_for(@url, url: new_url_path) do |u| %>
-
-
-
-
-<%= u.label  "Full Url:" %>
-<%= u.text_field :original_url %>  &nbsp; <%= u.submit %>
-<% end %>
 <div class="back">
 <%= link_to 'Back', index_url_path %>
 </div>
 
+<div class="form">
+
+<%= form_for(@url, url: new_url_path) do |u| %>
+
+<%= u.label  "Original Url:" %>
+<%= u.text_field :original_url %>  &nbsp; <%= u.submit %>
+<% end %>
+
+
 </div>
+<div class="error">
+<% @url.errors.full_messages.each do |message| %>
+  <b><%= message %></b>
+<% end %>
+</b>
+
 </body>

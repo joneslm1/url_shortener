@@ -26,7 +26,7 @@ class UrlController < ApplicationController
         format.html {redirect_to '/'}
         format.json { render :show, status: :created, location: @url }
       else
-        format.html { render :new }
+        format.html { render :new, notice: 'Need a url starting with http:// or https:// please!' }
         format.json { render json: @url.errors, status: :unprocessable_entity }
       end
     end
