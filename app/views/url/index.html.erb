@@ -2,8 +2,7 @@
 
 
     <% @urls.each do |url| %>
-        <div><%= url.id %></div>
+        <a href="url-shawty.herokuapp.com/<%= url.id %>">url-shawty.herokuapp.com/<%= url.id %></a>
         <div><%= url.original_url %></div>
-        <a href="url-shawty.herokuapp.com/<%= url.id %>">link</a>
-
+        <div> <%= link_to 'Destroy', delete_url_path(url.id), method: :delete, data: { confirm: 'Are you sure?' } %> </div>
     <% end %>

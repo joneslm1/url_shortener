@@ -3,7 +3,12 @@ Rails.application.routes.draw do
 
   root "url#index"
   get "/index" => "url#index"
-  get "/:id" => redirect("www.google.com")
+
   get "/new" => "url#new", :as => :new_url
   post "/new" => "url#create"
+
+  get "/:id" => "url#redirect"
+
+  delete "/:id" => "url#destroy", :as => :delete_url
+
 end
